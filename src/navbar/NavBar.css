@@ -1,0 +1,62 @@
+.nav {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 90%;
+    z-index: 1;
+    padding: 2rem 3rem;
+    left: 5%;
+    border-bottom: 1px solid var(--border-text-color);
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.125rem;
+}
+
+.nav__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--title-color);
+    font-family: "Panchang-Light";
+    letter-spacing: 0.1rem;
+    text-transform: lowercase;
+}
+
+.nav__left a {
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+.nav__right a {
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+.nav__logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--title-color);
+    font-family: "Panchang-Medium";
+    letter-spacing: 0.2rem;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--title-color);
+    font-family: "Panchang-Light";
+    letter-spacing: 0.1rem;
+    text-transform: lowercase;
+}
+

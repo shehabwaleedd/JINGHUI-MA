@@ -1,0 +1,28 @@
+.home {
+    padding-top: 3rem;
+    min-height: 150vh;
+    overflow-y: hidden;
+}
+
+.home__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home__grid {
+    display: flex;
+    margin-left: -10px; /* Adjust as needed */
+    width: auto;
+  }
+  
+  .grid__item {
+    padding: 10px; /* Adjust as needed */
+  }
+  
+  .grid__item img {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+  }
+  
