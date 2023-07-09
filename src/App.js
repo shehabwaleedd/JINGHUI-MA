@@ -30,7 +30,6 @@ function App() {
 
   return (
     <>
-      <div className="noise"></div>
       <div className="App" id={theme}>
         <NavBar />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>

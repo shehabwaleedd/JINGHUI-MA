@@ -1,28 +1,94 @@
 .home {
     padding-top: 3rem;
-    min-height: 150vh;
-    overflow-y: hidden;
+    min-height: 200vh;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .home__container {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .home__grid {
-    display: flex;
-    margin-left: -10px; /* Adjust as needed */
-    width: auto;
-  }
-  
-  .grid__item {
-    padding: 10px; /* Adjust as needed */
-  }
-  
-  .grid__item img {
-    width: 100%; /* Adjust as needed */
-    height: auto;
-  }
-  
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    grid-gap: 1px;
+}
+
+/* .home__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, 500px);
+    grid-gap: 20px;
+} */
+
+.grid__item:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid__item:nth-child(5),
+.grid__item:nth-child(13),
+.grid__item:nth-child(15),
+.grid__item:nth-child(17),
+.grid__item:nth-child(19),
+.grid__item:nth-child(21),
+.grid__item:nth-child(23),
+.grid__item:nth-child(25),
+.grid__item:nth-child(27),
+.grid__item:nth-child(29),
+.grid__item:nth-child(31),
+.grid__item:nth-child(33),
+.grid__item:nth-child(35) {
+    grid-row: span 3;
+}
+
+.grid__item:nth-child(2),
+.grid__item:nth-child(3),
+.grid__item:nth-child(4),
+.grid__item:nth-child(6),
+.grid__item:nth-child(7),
+.grid__item:nth-child(8),
+.grid__item:nth-child(9),
+.grid__item:nth-child(10),
+.grid__item:nth-child(11),
+.grid__item:nth-child(12),
+.grid__item:nth-child(14),
+.grid__item:nth-child(16),
+.grid__item:nth-child(18),
+.grid__item:nth-child(20),
+.grid__item:nth-child(22),
+.grid__item:nth-child(24),
+.grid__item:nth-child(26),
+.grid__item:nth-child(28),
+.grid__item:nth-child(30),
+.grid__item:nth-child(32),
+.grid__item:nth-child(34),
+.grid__item:nth-child(36) {
+    grid-row: span 2;
+}
+
+.grid__item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+
+
+.grid__item:hover img {
+    transform: scale(1.05);
+}
+
+.grid__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
