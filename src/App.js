@@ -14,7 +14,7 @@ export const ThemeContext = createContext(null);
 
 function App() {
 
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [navOpen, setNavOpen] = useState(false)
   const [language, setLanguage] = useState(i18next.language);
   const [languageExpanded, setLanguageExpanded] = useState(false);
@@ -25,7 +25,7 @@ function App() {
   const location = useLocation();
 
   const toggleTheme = () => {
-    theme === 'dark' ? setTheme('light') : setTheme('dark');
+    theme === 'light' ? setTheme('dark') : setTheme('light');
   };
 
   return (
@@ -36,8 +36,6 @@ function App() {
             <AnimatePresence>
               <MainRoutes isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible}  location={location} key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
             </AnimatePresence>
-          <ScrollUp />
-          <Toggle theme={theme} toggleTheme={toggleTheme} />
         </ThemeContext.Provider>
       </div>
     </>

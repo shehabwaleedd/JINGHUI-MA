@@ -1,0 +1,53 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.about__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translate(0rem, 2rem);
+    width: 70%;
+}
+
+.about__left img {
+    width: 80%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.about__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 2rem;
+}
+
+.about__right h1 {
+    font-size: 2rem;
+    font-family: "Panchang-Medium", sans-serif;
+    color: var(--title-color);
+    text-transform: lowercase;
+}
+
+.about__right p {
+    font-size: 1rem;
+    font-family: "Satoshi-Light", sans-serif;
+    color: var(--text-color);
+    text-transform: lowercase;
+}

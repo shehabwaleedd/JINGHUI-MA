@@ -5,7 +5,6 @@
 
 /* Dark Mode */
 #dark {
-  /* Colors */
   --title-color: #ffffda;
   --title-color-dark: hsl(var(--hue), var(--sat), 80%);
   --text-color: #ffffdabf;
