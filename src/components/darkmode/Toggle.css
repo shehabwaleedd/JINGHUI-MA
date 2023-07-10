@@ -51,12 +51,12 @@
 
 .blackcircle {
 
-    background-color: var(--container-color);
+    background-color: #10100e;
     left: 0;
 }
 
 .whitecircle {
-    background-color: var(--title-color);
+    background-color: #fef3de;
     right: 0;
 }
 

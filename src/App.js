@@ -10,6 +10,7 @@ import Toggle from "./components/darkmode/Toggle";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import "./App.css";
 import NavBar from "./navbar/NavBar";
+import Footer from "./pages/footer/Footer";
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -31,11 +32,12 @@ function App() {
   return (
     <>
       <div className="App" id={theme}>
-        <NavBar theme={theme} toggleTheme={toggleTheme} />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <AnimatePresence>
-              <MainRoutes isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible}  location={location} key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
-            </AnimatePresence>
+          <NavBar theme={theme} toggleTheme={toggleTheme} />
+          <AnimatePresence>
+            <MainRoutes isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} location={location} key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+          </AnimatePresence>
+          <Footer />
         </ThemeContext.Provider>
       </div>
     </>
