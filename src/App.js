@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { createContext } from "react";
+import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import MainRoutes from "./routes/MainRoutes";
 import Toggle from "./components/darkmode/Toggle";
@@ -30,7 +31,7 @@ function App() {
   return (
     <>
       <div className="App" id={theme}>
-        <NavBar />
+        <NavBar theme={theme} toggleTheme={toggleTheme} />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <AnimatePresence>
               <MainRoutes isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible}  location={location} key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />

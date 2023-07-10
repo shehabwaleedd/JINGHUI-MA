@@ -3,19 +3,13 @@ import { motion } from 'framer-motion';
 import './Toggle.css';
 import { BiMoon, BiSun } from 'react-icons/bi';
 
-const Toggle = ({ toggleTheme, navOpen }) => {
-  const spring = {
-    type: 'spring',
-    stiffness: 700,
-    damping: 30
-  };
-
-  const [isOn, setIsOn] = useState(false);
+const Toggle = ({ toggleTheme }) => {
 
   const toggleSwitch = () => {
-    setIsOn(!isOn);
     toggleTheme(); // Invoke the function
   };
+
+  
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
