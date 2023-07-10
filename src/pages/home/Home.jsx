@@ -5,11 +5,36 @@ import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const Home = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [shuffledData, setShuffledData] = useState([]);
+
+    const handleSwipeLeft = () => {
+        let newIndex = currentIndex + 1;
+        newIndex = (newIndex + shuffledData.length) % shuffledData.length;
+        setSelectedImage(shuffledData[newIndex].img);
+        setCurrentIndex(newIndex);
+    };
+
+    const handleSwipeRight = () => {
+        let newIndex = currentIndex - 1;
+        newIndex = (newIndex - 1 + shuffledData.length) % shuffledData.length;
+        setSelectedImage(shuffledData[newIndex].img);
+        setCurrentIndex(newIndex);
+    };
+
+    const handleContainerSwipe = useSwipeable({
+        onSwipedLeft: handleSwipeLeft,
+        onSwipedRight: handleSwipeRight,
+    });
+
+    const handleModalSwipe = useSwipeable({
+        onSwipedLeft: handleSwipeLeft,
+        onSwipedRight: handleSwipeRight,
+    });
 
     const openPreview = (image, index) => {
         setSelectedImage(image);
@@ -20,26 +45,11 @@ const Home = () => {
         setSelectedImage(null);
     };
 
-    const handleSwipe = useSwipeable({
-        onSwipedLeft: () => handleSwipeLeft(),
-        onSwipedRight: () => handleSwipeRight(),
-    });
-
-    const handleSwipeLeft = () => {
-        const newIndex = currentIndex + 1;
-        if (newIndex < Data.length) {
-            setSelectedImage(Data[newIndex].img);
-            setCurrentIndex(newIndex);
-        }
-    };
-
-    const handleSwipeRight = () => {
-        const newIndex = currentIndex - 1;
-        if (newIndex >= 0) {
-            setSelectedImage(Data[newIndex].img);
-            setCurrentIndex(newIndex);
-        }
-    };
+    useEffect(() => {
+        // Shuffle the Data array on each render
+        const shuffledArray = [...Data].sort(() => Math.random() - 0.5);
+        setShuffledData(shuffledArray);
+    }, []);
 
     useEffect(() => {
         if (selectedImage) {
@@ -51,10 +61,14 @@ const Home = () => {
 
     return (
         <main className='home'>
-            <div className='home__container container' {...handleSwipe}>
+            <div className='home__container container' {...handleContainerSwipe}>
                 <div className='home__grid'>
-                    {Data.map(({ img, id }, index) => (
-                        <div key={id} className='grid__item' onClick={() => openPreview(img, index)}>
+                    {shuffledData.map(({ img, id }, index) => (
+                        <div
+                            key={id}
+                            className='grid__item'
+                            onClick={() => openPreview(img, index)}
+                        >
                             <img src={img} alt='sass' />
                         </div>
                     ))}
@@ -68,7 +82,7 @@ const Home = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         exit={{ opacity: 0 }}
-                        {...handleSwipe}
+                        {...handleModalSwipe}
                     >
                         <div className='preview__close'>
                             <button onClick={closePreview}>X</button>
@@ -86,7 +100,7 @@ const Home = () => {
                                 <button
                                     className='button__next'
                                     onClick={handleSwipeLeft}
-                                    disabled={currentIndex === Data.length - 1}
+                                    disabled={currentIndex === shuffledData.length - 1}
                                 >
                                     <IoIosArrowForward />
                                 </button>

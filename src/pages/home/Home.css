@@ -48,6 +48,7 @@
 .grid__item:nth-child(31),
 .grid__item:nth-child(33),
 .grid__item:nth-child(35) {
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     grid-row: span 21;
 }
 
@@ -70,6 +71,7 @@
 .grid__item:nth-child(26),
 .grid__item:nth-child(28),
 .grid__item:nth-child(30) {
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     grid-row: span 12;
 }
 
@@ -79,11 +81,13 @@
     overflow: hidden;
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
+    
 }
 
 
 
 .grid__item:hover img {
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     transform: scale(1.05);
 }
 
@@ -123,7 +127,8 @@
     display: block;
     width: 75vw;
     height: 90vh;
-    object-fit: cover;
+    object-fit: contain;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .preview__content img.zoomed {
@@ -143,7 +148,7 @@
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     border-radius: 0.1rem;
     font-size: 1.5rem;
-    color: var(--body-color);
+    color: #ffffda;
     background-color: transparent;
 }
 
@@ -156,7 +161,7 @@
     font-size: 2rem;
     margin: 0 0.5rem;
     background-color: transparent;
-    color: var(--body-color);
+    color: #ffffda;
 }
 
 .preview__buttons button h1 {
