@@ -102,3 +102,31 @@
     gap: 2rem;
 }
 
+@media (max-width: 470px) {
+    .contact__container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact__container h1 {
+        font-size: 0.9rem;
+    }
+
+    .contact__container p {
+        font-size: 0.8rem;
+    }
+
+    .contact__container span {
+        font-size: 0.8rem;
+    }
+
+    .contact__container span a {
+        font-size: 0.85rem;
+    }
+
+    .contact__right {
+        transform: translate(-2rem, 0rem);
+    }
+
+
+}

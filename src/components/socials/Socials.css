@@ -36,3 +36,16 @@
     color: var(--title-color);
 }
 
+@media (max-width: 470px)  {
+    .socials__container {
+        transform: translateX(7rem);
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+    }
+    .socials__content {
+        margin: 0 0.2rem;
+    }
+    .socials__content ul li a {
+        font-size: 2rem;
+    }
+}
