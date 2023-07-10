@@ -10,19 +10,27 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 const Home = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [shuffledData, setShuffledData] = useState([]);
+
+    const openPreview = (image, index) => {
+        setSelectedImage(image);
+        setCurrentIndex(index);
+    };
+
+    const closePreview = () => {
+        setSelectedImage(null);
+    };
 
     const handleSwipeLeft = () => {
         let newIndex = currentIndex + 1;
-        newIndex = (newIndex + shuffledData.length) % shuffledData.length;
-        setSelectedImage(shuffledData[newIndex].img);
+        newIndex = (newIndex + Data.length) % Data.length;
+        setSelectedImage(Data[newIndex].img);
         setCurrentIndex(newIndex);
     };
 
     const handleSwipeRight = () => {
         let newIndex = currentIndex - 1;
-        newIndex = (newIndex - 1 + shuffledData.length) % shuffledData.length;
-        setSelectedImage(shuffledData[newIndex].img);
+        newIndex = (newIndex - 1 + Data.length) % Data.length;
+        setSelectedImage(Data[newIndex].img);
         setCurrentIndex(newIndex);
     };
 
@@ -36,21 +44,6 @@ const Home = () => {
         onSwipedRight: handleSwipeRight,
     });
 
-    const openPreview = (image, index) => {
-        setSelectedImage(image);
-        setCurrentIndex(index);
-    };
-
-    const closePreview = () => {
-        setSelectedImage(null);
-    };
-
-    useEffect(() => {
-        // Shuffle the Data array on each render
-        const shuffledArray = [...Data].sort(() => Math.random() - 0.5);
-        setShuffledData(shuffledArray);
-    }, []);
-
     useEffect(() => {
         if (selectedImage) {
             document.body.classList.add('no-scroll');
@@ -63,7 +56,7 @@ const Home = () => {
         <main className='home'>
             <div className='home__container container' {...handleContainerSwipe}>
                 <div className='home__grid'>
-                    {shuffledData.map(({ img, id }, index) => (
+                    {Data.map(({ img, id }, index) => (
                         <div
                             key={id}
                             className='grid__item'
@@ -100,7 +93,7 @@ const Home = () => {
                                 <button
                                     className='button__next'
                                     onClick={handleSwipeLeft}
-                                    disabled={currentIndex === shuffledData.length - 1}
+                                    disabled={currentIndex === Data.length - 1}
                                 >
                                     <IoIosArrowForward />
                                 </button>
