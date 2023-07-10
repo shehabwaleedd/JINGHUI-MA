@@ -23,7 +23,7 @@
     gap: 4rem;
 }
 
-.nav__left {
+.nav__container a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,15 +36,6 @@
     text-transform: lowercase;
 }
 
-.nav__left a {
-    text-decoration: none;
-    color: var(--title-color);
-}
-
-.nav__right a {
-    text-decoration: none;
-    color: var(--title-color);
-}
 
 .nav__logo h1 {
     font-size: 1.5rem;
@@ -54,16 +45,21 @@
     letter-spacing: 0.3rem;
 }
 
-.nav__right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--title-color);
-    font-family: "Panchang-Regular";
-    letter-spacing: 0.1rem;
-    text-transform: lowercase;
-}
 
+
+
+@media (max-width: 470px) {
+    .nav {
+        gap: 1rem;
+    }
+    .nav__container {
+        gap: 1rem;
+        font-size: 1.1rem;
+    }
+    .nav__container a {
+        font-size: 1rem;
+    }
+    .nav__logo h1 {
+        font-size: 1.2rem;
+    }
+}
