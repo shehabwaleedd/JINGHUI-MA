@@ -26,7 +26,7 @@
     grid-gap: 20px;
 } */
 
-.grid__item:nth-child(1){
+.grid__item:nth-child(1) {
 
     grid-row: span 1;
 }
@@ -34,6 +34,7 @@
 .grid__item:nth-child(2) {
     grid-row: span 3;
 }
+
 .grid__item:nth-child(5),
 .grid__item:nth-child(13),
 .grid__item:nth-child(15),
@@ -92,4 +93,106 @@
     height: 100%;
     object-fit: cover;
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+
+.preview__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.722);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(141, 141, 141, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.preview__content {
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.preview__content img {
+    display: block;
+    width: 75vw;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.preview__content img.zoomed {
+    transform: scale(2);
+}
+
+.preview__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.preview__close button {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 0.1rem;
+    font-size: 1.5rem;
+    color: var(--body-color);
+    background-color: transparent;
+}
+
+.preview__buttons button {
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 0.1rem;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    background-color: transparent;
+    color: var(--body-color);
+}
+
+.preview__buttons button h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.button__next {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+}
+
+.button__prev {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+}
+
+@media (max-width: 470px) {
+    .preview__content img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .button__next {
+        position: absolute;
+        top: 50%;
+        right: -1rem;
+    }
+    
+    .button__prev {
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+    }
 }

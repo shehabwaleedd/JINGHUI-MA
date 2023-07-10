@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { createContext } from "react";
-import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import MainRoutes from "./routes/MainRoutes";
 import Toggle from "./components/darkmode/Toggle";

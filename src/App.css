@@ -356,6 +356,10 @@ img {
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: 'Satoshi';
   src: url('../public/fonts/Satoshi-Variable.woff2') format('woff2'),
