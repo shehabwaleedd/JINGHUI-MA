@@ -1,9 +1,14 @@
 import React from 'react'
 import './Contact.css'
+import {motion} from 'framer-motion'
 
 const Contact = () => {
     return (
-        <section className='contact'>
+        <motion.section className='contact'
+        initial={{ opacity: 0, y: 150 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: "easeInOut" }}
+        exit={{ opacity: 0 }}>
             <div className="contact__container container">
                 <div className="contact__left">
                     <div className="left__upper">
@@ -22,7 +27,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

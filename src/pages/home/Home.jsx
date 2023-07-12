@@ -53,7 +53,13 @@ const Home = () => {
     }, [selectedImage]);
 
     return (
-        <main className='home'>
+        <motion.main className='home'
+        initial={{ opacity: 0, y: 150 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: "easeInOut" }}
+        exit={{ opacity: 0 }}
+        >
+
             <div className='home__container container' {...handleContainerSwipe}>
                 <div className='home__grid'>
                     {Data.map(({ img, id }, index) => (
@@ -110,7 +116,7 @@ const Home = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </main>
+        </motion.main>
     );
 };
 

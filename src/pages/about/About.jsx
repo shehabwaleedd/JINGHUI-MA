@@ -2,10 +2,15 @@ import React from 'react'
 import './About.css'
 import cover from '../../Assets/cover/photoprofil.jpg'
 import Socials from '../../components/socials/Socials'
+import {motion} from 'framer-motion'
 
 const About = () => {
     return (
-        <section className='about'>
+        <motion.section className='about'        
+        initial={{ opacity: 0, y: 150 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: "easeInOut" }}
+        exit={{ opacity: 0 }}>
             <div className="about__container container">
                 <div className="about__left">
                     <img src={cover} alt="" />
@@ -33,7 +38,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
