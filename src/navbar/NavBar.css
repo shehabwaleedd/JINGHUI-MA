@@ -34,8 +34,23 @@
     font-family: "Panchang-Regular";
     letter-spacing: 0.1rem;
     text-transform: lowercase;
+    position: relative;
 }
 
+.nav__container a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0rem;
+    height: 2px;
+    bottom: -3.3rem;
+    background-color: var(--title-color);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav__container a:hover::after {
+    width: 9rem;
+}
 
 .nav__logo h1 {
     font-size: 1.5rem;
