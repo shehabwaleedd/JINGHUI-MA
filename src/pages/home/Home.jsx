@@ -57,7 +57,7 @@ const Home = () => {
         initial={{ opacity: 0, y: 150 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: "easeInOut" }}
-        exit={{ opacity: 0 }}
+        exit={{ opacity: 0, y: 150 }}
         >
 
             <div className='home__container container' {...handleContainerSwipe}>
