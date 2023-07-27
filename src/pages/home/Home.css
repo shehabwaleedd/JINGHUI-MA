@@ -53,8 +53,9 @@
     grid-row: span 3;
 }
 
-
-.grid__item:nth-child(4),
+.grid__item:nth-child(4) {
+    grid-row: span 4;
+}
 .grid__item:nth-child(6),
 .grid__item:nth-child(7),
 .grid__item:nth-child(8),

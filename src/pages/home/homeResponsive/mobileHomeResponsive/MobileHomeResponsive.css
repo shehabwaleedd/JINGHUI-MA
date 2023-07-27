@@ -1,0 +1,36 @@
+.home {
+    padding-top: 3rem;
+    min-height: 200vh;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    padding-bottom: 5rem;
+}
+
+.home__container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home__grid-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    grid-gap: 5px;
+}
+.grid__item-mobile {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    
+}
+
+.grid__item-mobile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
