@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3d221dab.css",
-    "main.js": "/static/js/main.c1555c0c.js",
+    "main.js": "/static/js/main.fdbbfbdb.js",
     "static/js/787.b12a18e6.chunk.js": "/static/js/787.b12a18e6.chunk.js",
     "static/media/img0015.webp": "/static/media/img0015.8e2a66adc7c14946549b.webp",
     "static/media/000032 copie.avif": "/static/media/000032 copie.d457bbd47cb26a2c04ec.avif",
@@ -12,24 +12,16 @@
     "static/media/000040.avif": "/static/media/000040.4a58f7490c94edf5b715.avif",
     "static/media/img0022.webp": "/static/media/img0022.6a5daf88cfc7d91c43b4.webp",
     "static/media/img0023.webp": "/static/media/img0023.0a40f23dd39561abe16c.webp",
-    "static/media/000030.webp": "/static/media/000030.24c91317c19d83b7fefe.webp",
-    "static/media/000032.webp": "/static/media/000032.d92b95a09ecad25126b3.webp",
     "static/media/000028.webp": "/static/media/000028.8b4f8d5f7602909cf222.webp",
     "static/media/1.webp": "/static/media/1.f574d79be4be1f746bb9.webp",
-    "static/media/IMG_1432.webp": "/static/media/IMG_1432.0d3fb7f553223729b673.webp",
     "static/media/IMG_1446.avif": "/static/media/IMG_1446.7b5f6cc7508410a88a42.avif",
     "static/media/2.webp": "/static/media/2.9218f8855cffb3665c21.webp",
-    "static/media/000034.webp": "/static/media/000034.221040c2079be29d17e3.webp",
     "static/media/IMG_1421.avif": "/static/media/IMG_1421.2f1f1b3e2a6a49007140.avif",
     "static/media/IMG_1415.avif": "/static/media/IMG_1415.561e5340b1e4181a01ce.avif",
-    "static/media/IMG_1407.webp": "/static/media/IMG_1407.539949fb188dbff21440.webp",
     "static/media/000027.webp": "/static/media/000027.b9ecd5ba4275307e95ab.webp",
     "static/media/IMG_1450.avif": "/static/media/IMG_1450.587afbe8c1c88086ca70.avif",
     "static/media/IMG_1423.avif": "/static/media/IMG_1423.8157c5827b2e07f0cf67.avif",
     "static/media/IMG_1459.avif": "/static/media/IMG_1459.e68670714ac6362f15c4.avif",
-    "static/media/IMG_1419.webp": "/static/media/IMG_1419.dcfb6a77d057ba17713f.webp",
-    "static/media/000023.webp": "/static/media/000023.f8ed2f5785c77372d8c0.webp",
-    "static/media/IMG_1434.webp": "/static/media/IMG_1434.adc2460ccb70089d1730.webp",
     "static/media/4D7577AF-34AB-455A-AEA2-B10C0C04A0EE_1_105_c.avif": "/static/media/4D7577AF-34AB-455A-AEA2-B10C0C04A0EE_1_105_c.c3e1925e59607bd9886f.avif",
     "static/media/3.webp": "/static/media/3.2a5d10e82456d0927019.webp",
     "static/media/IMG_1444.avif": "/static/media/IMG_1444.53473ddd77e4eef4b217.avif",
@@ -81,11 +73,11 @@
     "static/media/Panchang-Extralight.woff2": "/static/media/Panchang-Extralight.c0d87f2e95ca08fa2bd2.woff2",
     "index.html": "/index.html",
     "main.3d221dab.css.map": "/static/css/main.3d221dab.css.map",
-    "main.c1555c0c.js.map": "/static/js/main.c1555c0c.js.map",
+    "main.fdbbfbdb.js.map": "/static/js/main.fdbbfbdb.js.map",
     "787.b12a18e6.chunk.js.map": "/static/js/787.b12a18e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3d221dab.css",
-    "static/js/main.c1555c0c.js"
+    "static/js/main.fdbbfbdb.js"
   ]
 }
