@@ -1,11 +1,4 @@
-import img1 from "../../Assets/Egypt/IMG_1419.webp"
-import img2 from "../../Assets/Egypt/IMG_1432.webp"
-import img3 from "../../Assets/Egypt/IMG_1434.webp"
-import img4 from "../../Assets/Film/Balesco Theater_Roof_Cats/000023.webp"
-import img5 from "../../Assets/Film/Balesco Theater_Roof_Cats/000030.webp"
-import img6 from "../../Assets/Film/Balesco Theater_Roof_Cats/000032.webp"
-import img7 from "../../Assets/Film/Balesco Theater_Roof_Cats/000034.webp"
-import img8 from "../../Assets/Film/Beer Suer/IMG_1407.webp"
+
 import img9 from "../../Assets/Film/Beer Suer/IMG_1415.avif"
 import img10 from "../../Assets/Film/Beer Suer/IMG_1421.avif"
 import img11 from "../../Assets/Film/Beer Suer/IMG_1423.avif"
@@ -31,39 +24,6 @@ import img30 from "../../Assets/Film/Les Calanques/000040.avif"
 import img31 from "../../Assets/Film/Les Calanques/000032 copie.avif"
 
 const Data = [
-    {
-        id: 1,
-        img: img1,
-    },
-    {
-        id: 2,
-        img: img2,
-    },
-    {
-        id: 3,
-        img: img3,
-    },
-    {
-        id: 4,
-        img: img4,
-    },
-    {
-        id: 5,
-        img: img5,
-    },
-    {
-        id: 6,
-        img: img6,
-    },
-    {
-        id: 7,
-        img: img7,
-    },
-    {
-        id: 8,
-        img: img8,
-
-    },
     {
         id: 9,
         img: img9,
