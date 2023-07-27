@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d794655.css",
-    "main.js": "/static/js/main.bc1b111c.js",
+    "main.css": "/static/css/main.0f8f4e58.css",
+    "main.js": "/static/js/main.d6d25763.js",
     "static/js/787.b12a18e6.chunk.js": "/static/js/787.b12a18e6.chunk.js",
     "static/media/img0015.webp": "/static/media/img0015.8e2a66adc7c14946549b.webp",
     "static/media/000032 copie.avif": "/static/media/000032 copie.d457bbd47cb26a2c04ec.avif",
@@ -80,12 +80,12 @@
     "static/media/Panchang-Extrabold.woff2": "/static/media/Panchang-Extrabold.1d51beda7861a0d49943.woff2",
     "static/media/Panchang-Extralight.woff2": "/static/media/Panchang-Extralight.c0d87f2e95ca08fa2bd2.woff2",
     "index.html": "/index.html",
-    "main.7d794655.css.map": "/static/css/main.7d794655.css.map",
-    "main.bc1b111c.js.map": "/static/js/main.bc1b111c.js.map",
+    "main.0f8f4e58.css.map": "/static/css/main.0f8f4e58.css.map",
+    "main.d6d25763.js.map": "/static/js/main.d6d25763.js.map",
     "787.b12a18e6.chunk.js.map": "/static/js/787.b12a18e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d794655.css",
-    "static/js/main.bc1b111c.js"
+    "static/css/main.0f8f4e58.css",
+    "static/js/main.d6d25763.js"
   ]
 }
