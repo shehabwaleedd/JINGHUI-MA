@@ -53,20 +53,11 @@ const Home = () => {
     }, [selectedImage]);
 
     return (
-        <motion.main className='home'
-        initial={{ opacity: 0, y: 150 }}
-        animate={{ opacity: 1, y: 0, type: "tween", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} 
-        exit={{ opacity: 0, y: 150, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}
-        >
-
+        <motion.main className='home' initial={{ opacity: 0, y: 150 }} animate={{ opacity: 1, y: 0, type: "tween", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }}  exit={{ opacity: 0, y: 150, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <div className='home__container container' {...handleContainerSwipe}>
                 <div className='home__grid'>
                     {Data.map(({ img, id }, index) => (
-                        <div
-                            key={id}
-                            className='grid__item'
-                            onClick={() => openPreview(img, index)}
-                        >
+                        <div key={id} className='grid__item' onClick={() => openPreview(img, index)}>
                             <img src={img} alt='sass' />
                         </div>
                     ))}
@@ -74,43 +65,22 @@ const Home = () => {
             </div>
             <AnimatePresence>
                 {selectedImage && (
-                    <motion.div
-                        className='preview__modal'
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                        exit={{ opacity: 0 }}
-                        {...handleModalSwipe}
-                    >
+                    <motion.div className='preview__modal' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} exit={{ opacity: 0 }}
+                        {...handleModalSwipe}>
                         <div className='preview__close'>
                             <button onClick={closePreview}>X</button>
                         </div>
 
                         <motion.div className='preview__content'>
                             <div className='preview__buttons'>
-                                <button
-                                    className='button__prev'
-                                    onClick={handleSwipeRight}
-                                    disabled={currentIndex === 0}
-                                >
+                                <button className='button__prev'onClick={handleSwipeRight}disabled={currentIndex === 0}>
                                     <IoIosArrowBack />
                                 </button>
-                                <button
-                                    className='button__next'
-                                    onClick={handleSwipeLeft}
-                                    disabled={currentIndex === Data.length - 1}
-                                >
+                                <button className='button__next'onClick={handleSwipeLeft}disabled={currentIndex === Data.length - 1}>
                                     <IoIosArrowForward />
                                 </button>
                             </div>
-                            <motion.img
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ duration: 0.5 }}
-                                exit={{ opacity: 0 }}
-                                src={selectedImage}
-                                alt='Preview'
-                            />
+                            <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} exit={{ opacity: 0 }} src={selectedImage} alt='Preview'/>
                         </motion.div>
                     </motion.div>
                 )}
