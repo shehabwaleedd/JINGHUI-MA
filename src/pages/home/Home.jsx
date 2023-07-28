@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css';
 import Data from './Data';
-import { getDocs, collection } from "firebase/firestore";
-import { db } from "../../firebase-config";
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
@@ -15,9 +13,6 @@ import MobileHomeResponsive from './homeResponsive/mobileHomeResponsive/MobileHo
 const Home = ({ isMobile }) => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const postsCollectionRef = collection(db, "grid");
-    const [postLists, setPostList] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     const openPreview = (image, index) => {
         setSelectedImage(image);
         setCurrentIndex(index);
@@ -58,19 +53,7 @@ const Home = ({ isMobile }) => {
             document.body.classList.remove('no-scroll');
         }
     }, [selectedImage]);
-    useEffect(() => {
-        const getPosts = async () => {
-            try {
-                const data = await getDocs(postsCollectionRef);
-                setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-                setIsLoading(false);
-            } catch (error) {
-                console.log("Error fetching posts:", error);
-                setIsLoading(false);
-            }
-        };
-        getPosts();
-    }, []);
+
 
     return (
         <>
@@ -91,14 +74,19 @@ const Home = ({ isMobile }) => {
 
             ) : (
                 <motion.main className='home' initial={{ opacity: 0, y: 150 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 150, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
-                    <div className='home__container container'>
+                    <div className='home__container '>
                         <div className='home__grid'>
-                            {postLists.map(({ img, id, }, index) => (
+                            {Data.map(({ img, id, img_300px, img_600px, img_900px }, index) => (
                                 <div key={id} className='grid__item' onClick={() => openPreview(img, index)}>
                                     <LazyLoadImage
                                         src={img}
                                         alt='sass'
                                         effect='blur'
+                                        srcSet={[
+                                            `${img_300px}?w=300&format=webp 300w`,
+                                            `${img_600px}?w=600&format=webp 600w`,
+                                            `${img_900px}?w=900&format=webp 900w`,
+                                        ]}
                                     />
                                 </div>
                             ))}

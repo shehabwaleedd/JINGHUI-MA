@@ -7,19 +7,23 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
 
 
-const MobileHomeResponsive = ({ openPreview, selectedImage , currentIndex, handleSwipeLeft, handleSwipeRight, handleModalSwipe, closePreview}) => {
+const MobileHomeResponsive = ({ openPreview, selectedImage, currentIndex, handleSwipeLeft, handleSwipeRight, handleModalSwipe, closePreview }) => {
     return (
         <motion.main className='home' initial={{ opacity: 0, y: 150 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 150, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <div className='home__container-mobilee containered'>
                 <div className='home__grid-mobile'>
-                    {Data.map(({ img, id }, index) => (
+                    {Data.map(({ img, id, img_300px, img_600px, img_900px }, index) => (
                         <div key={id} className='grid__item-mobile' onClick={() => openPreview(img, index)}>
                             <LazyLoadImage
                                 src={img}
                                 alt='sass'
                                 effect='blur'
-                                width={200} 
-                                height={300}/>
+                                srcSet={[
+                                    `${img_300px}?w=300&format=webp 300w`,
+                                    `${img_600px}?w=600&format=webp 600w`,
+                                    `${img_900px}?w=900&format=webp 900w`,
+                                ]}
+                            />
                         </div>
                     ))}
                 </div>
