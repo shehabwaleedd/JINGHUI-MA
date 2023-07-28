@@ -7,12 +7,12 @@ import { useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 import MobileHomeResponsive from './homeResponsive/mobileHomeResponsive/MobileHomeResponsive';
 
 const Home = ({ isMobile }) => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+
     const openPreview = (image, index) => {
         setSelectedImage(image);
         setCurrentIndex(index);
@@ -54,7 +54,6 @@ const Home = ({ isMobile }) => {
         }
     }, [selectedImage]);
 
-
     return (
         <>
             {isMobile ? (
@@ -74,7 +73,7 @@ const Home = ({ isMobile }) => {
 
             ) : (
                 <motion.main className='home' initial={{ opacity: 0, y: 150 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 150, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
-                    <div className='home__container '>
+                    <div className='home__container container'>
                         <div className='home__grid'>
                             {Data.map(({ img, id, img_300px, img_600px, img_900px }, index) => (
                                 <div key={id} className='grid__item' onClick={() => openPreview(img, index)}>
