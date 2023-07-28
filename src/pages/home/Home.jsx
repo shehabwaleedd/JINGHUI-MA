@@ -83,7 +83,6 @@ const Home = ({ isMobile }) => {
                                         effect='blur'
                                         srcSet={[
                                             `${img_300px}?w=300&format=webp 300w`,
-                                            `${img_600px}?w=600&format=webp 600w`,
                                         ]}
                                     />
                                 </div>
