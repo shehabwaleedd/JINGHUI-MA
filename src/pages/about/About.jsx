@@ -1,6 +1,6 @@
 import React from 'react'
 import './About.css'
-import cover from '../../Assets/cover/photoprofil.webp'
+import cover from '../../Assets/photoprofil.webp'
 import Socials from '../../components/socials/Socials'
 import {motion} from 'framer-motion'
 
