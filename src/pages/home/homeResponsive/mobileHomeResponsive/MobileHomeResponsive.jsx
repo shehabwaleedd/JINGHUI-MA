@@ -18,14 +18,8 @@ const MobileHomeResponsive = ({ openPreview, selectedImage , currentIndex, handl
                                 src={img}
                                 alt='sass'
                                 effect='blur'
-                                width={150} 
-                                height={300}
-                                srcSet={[
-                                    `${img}?w=300&format=webp 300w`,
-                                    `${img}?w=600&format=webp 600w`,
-                                    `${img}?w=900&format=webp 900w`,
-                                ]}
-                            />
+                                width={200} 
+                                height={300}/>
                         </div>
                     ))}
                 </div>
