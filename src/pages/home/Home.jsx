@@ -81,8 +81,6 @@ const Home = ({ isMobile }) => {
                                         src={img}
                                         alt='sass'
                                         effect='blur'
-                                        width={333} // Set the appropriate image width based on your design needs
-                                        height={500} // Set the appropriate image height based on your design needs
                                         srcSet={[
                                             `${img_300px}?w=300&format=webp 300w`,
                                             `${img_600px}?w=600&format=webp 600w`,
