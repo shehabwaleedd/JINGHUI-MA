@@ -14,7 +14,6 @@ import img4 from "../../Assets/000023.webp"
 import img4_300px from "../../Assets/000023_300x203.webp"
 import img4_600px from "../../Assets/000023_1_600x405.webp"
 import img4_900px from "../../Assets/000023_2_900x608.webp"
-
 import img6 from "../../Assets/000032.webp"
 import img6_300px from "../../Assets/000032_300x203.webp"
 import img6_600px from "../../Assets/000032_1_600x405.webp"
