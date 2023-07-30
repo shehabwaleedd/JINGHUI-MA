@@ -14,10 +14,7 @@ import img4 from "../../Assets/000023.webp"
 import img4_300px from "../../Assets/000023_300x203.webp"
 import img4_600px from "../../Assets/000023_1_600x405.webp"
 import img4_900px from "../../Assets/000023_2_900x608.webp"
-import img5 from "../../Assets/000030.webp"
-import img5_300px from "../../Assets/000030_300x444.webp"
-import img5_600px from "../../Assets/000030_1_600x888.webp"
-import img5_900px from "../../Assets/000030_2_900x1332.webp"
+
 import img6 from "../../Assets/000032.webp"
 import img6_300px from "../../Assets/000032_300x203.webp"
 import img6_600px from "../../Assets/000032_1_600x405.webp"
@@ -151,13 +148,6 @@ const Data = [
         img_300px: img4_300px,
         img_600px: img4_600px,
         img_900px: img4_900px,
-    },
-    {
-        id: 5,
-        img: img5,  
-        img_300px: img5_300px,
-        img_600px: img5_600px,
-        img_900px: img5_900px,
     },
     {
         id: 6,
