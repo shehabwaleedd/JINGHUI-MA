@@ -2,7 +2,6 @@ import React from 'react'
 import './DesktopHome.css'
 import Data from '../../Data'
 import { motion, AnimatePresence } from 'framer-motion'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
 
@@ -13,7 +12,8 @@ const DesktopHome = ({ selectedImage, currentIndex, handleSwipeLeft, handleSwipe
                 <div className='home__grid'>
                     {Data.map(({ img, id, img_300px, img_600px, img_900px }, index) => (
                         <div key={id} className='grid__item' onClick={() => openPreview(img, index)}>
-                            <img src={img} alt='sass' effect='blur' srcSet={[`${img_300px}?w=300&format=webp 300w`]}/>
+                            <img src={img} alt='sass' effect='blur' srcSet={[`${img_300px}?w=300&format=webp 300w`]}
+                            />
                         </div>
                     ))}
                 </div>
