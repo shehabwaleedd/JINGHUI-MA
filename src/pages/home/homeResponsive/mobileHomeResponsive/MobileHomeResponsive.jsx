@@ -2,7 +2,6 @@ import React from 'react'
 import './MobileHomeResponsive.css'
 import Data from '../../Data'
 import { motion, AnimatePresence } from 'framer-motion'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
 
@@ -14,7 +13,7 @@ const MobileHomeResponsive = ({ openPreview, selectedImage, currentIndex, handle
                 <div className='home__grid-mobile'>
                     {Data.map(({ img, id, img_300px, img_600px, img_900px }, index) => (
                         <div key={id} className='grid__item-mobile' onClick={() => openPreview(img, index)}>
-                            <LazyLoadImage
+                            <img
                                 src={img}
                                 alt='sass'
                                 effect='blur'
