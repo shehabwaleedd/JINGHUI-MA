@@ -12,7 +12,7 @@ const DesktopHome = ({ selectedImage, currentIndex, handleSwipeLeft, handleSwipe
                 <div className='home__grid'>
                     {Data.map(({ img, id, img_300px, img_600px, img_900px }, index) => (
                         <div key={id} className='grid__item' onClick={() => openPreview(img, index)}>
-                            <img src={img} alt='sass' effect='blur' srcSet={[`${img_300px}?w=300&format=webp 300w`]}
+                            <img src={img} alt='sass' effect='blur' srcSet={[`${img_900px}?w=900&format=webp 900w`]}
                             />
                         </div>
                     ))}
