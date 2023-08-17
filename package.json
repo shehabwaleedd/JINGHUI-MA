@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.19",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -30,7 +31,7 @@
     "react-masonry-component": "^6.3.0",
     "react-masonry-css": "^1.0.16",
     "react-router-dom": "^6.11.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-swipeable": "^7.0.1",
     "react-window": "^1.8.9",
     "swiper": "^10.0.4",
