@@ -96,7 +96,7 @@ const Column = ({ data, y, openPreview }) => {
                                 `${item.img}?w=1200&format=webp 1200w`,
                             ]}
                         
-                        /> {/* Access the img property */}
+                        />
                     </div>
                 );
             })}
