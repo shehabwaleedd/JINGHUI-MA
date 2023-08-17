@@ -89,7 +89,14 @@ const Column = ({ data, y, openPreview }) => {
             {data.map((item, i) => {
                 return (
                     <div key={i} className={styles.imageContainer} onClick={() => openPreview(item.img, i)}>
-                        <img src={item.img} alt="image" /> {/* Access the img property */}
+                        <img src={item.img} alt="emage" 
+                                srcSet={[ `${item.img_300px}?w=300&format=webp 300w`,
+                                `${item.img_600px}?w=600&format=webp 600w`,
+                                `${item.img_900px}?w=900&format=webp 900w`,
+                                `${item.img}?w=1200&format=webp 1200w`,
+                            ]}
+                        
+                        /> {/* Access the img property */}
                     </div>
                 );
             })}
