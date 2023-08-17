@@ -93,7 +93,6 @@ const Column = ({ data, y, openPreview }) => {
                                 srcSet={[ `${item.img_300px}?w=300&format=webp 300w`,
                                 `${item.img_600px}?w=600&format=webp 600w`,
                                 `${item.img_900px}?w=900&format=webp 900w`,
-                                `${item.img}?w=1200&format=webp 1200w`,
                             ]}
                         
                         />
@@ -103,3 +102,4 @@ const Column = ({ data, y, openPreview }) => {
         </motion.div>
     );
 };
+
