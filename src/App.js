@@ -26,14 +26,15 @@ function App() {
 
   return (
     <>
+      <div className="noise"></div>
       <div className="App" id={theme}>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <NavBar theme={theme} toggleTheme={toggleTheme} isMobile={isMobile} setIsMobile={setIsMobile}/>
+          <NavBar theme={theme} toggleTheme={toggleTheme} isMobile={isMobile} setIsMobile={setIsMobile} />
           <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname} >
               <Route path='/about' element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/" element={<Home  isMobile={isMobile}/>} />
+              <Route path="/" element={<Home isMobile={isMobile} />} />
             </Routes>
           </AnimatePresence>
           <ScrollUp />
